@@ -1,0 +1,125 @@
+/* START GLOBAL RULES */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+  text-decoration: none;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* END GLOBAL RULES */
+/* START VARIABLES */
+:root {
+    --main-color: #19c8fa;
+}
+/* END VARIABLES */
+/* START HEADER */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* min-height: 97px; */
+}
+header .container .logo {
+  padding: 30px 10px;
+}
+header .container ul {
+display: flex;
+flex: 1;
+}
+header .container .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container li {
+list-style: none;
+padding: 38px 10px;
+}
+/* header .container a {
+  
+} */
+header .container nav .active {
+  color: var(--main-color);
+  border-bottom: var(--main-color) solid 1px;
+}
+header .container .fa-magnifying-glass {
+  margin-left: 40px;
+  border-left: 2px solid;
+  padding-left: 20px;
+  font-size: 20px;
+} 
+header .container .fa-bars {
+  /* color: white; */
+  display: none;
+  position: absolute;
+  font-size: 20px;
+  right: 70px;
+  top: 40px;
+}
+header .container::after {
+  content: "";
+  width: calc(100% - 30px);
+  background-color: black;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+}
+header .container nav li:hover {
+  border-bottom: var(--main-color) solid 1px;
+}
+@media(max-width: 784px) {
+  header .container ul {
+    display: none;
+  }
+  header .container .fa-bars {
+    display: block;
+  }
+  header .container .fa-bars:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #00000057;
+  }
+  header .container .fa-bars:hover + ul li {
+    padding: 15px;
+  }
+}
+/* END HEADER */
