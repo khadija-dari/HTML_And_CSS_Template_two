@@ -11,6 +11,8 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;;
+  margin: 0;
+  padding: 0;
 }
 .container {
   padding-left: 15px;
@@ -487,3 +489,73 @@ background-color: #000;
 padding: 10px;
 }
 /* END SECTION SUPER VIDEO */
+/* START SECTION ABOUT US */
+.about-us {
+  padding-top: var(--padding);
+  padding-top: var(--padding);
+}
+.about-us .image {
+   position: relative;
+   max-width: 100%;
+   left: 50%;
+   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+   -moz-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   -o-transform: translateX(-50%);
+   bottom: -120px;
+   margin-top: -120px;
+}
+/* END SECTION ABOUT US */
+/* START SECTION STATISTICS */
+.statistics {
+  background-image: url(../images/stats.png);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+.statistics::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(16 15 15 / 70%);
+  top: 0;
+  left: 0;
+}
+.statistics .container {
+  background-color: var(--transparent-color);
+  position: relative;
+}
+.statistics .container .stats {
+  color: var(--basic-color);
+  padding: 30px;
+}
+.statistics .container .stats i {  
+  background-color: #000;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 50%;
+}
+.statistics .container .stats div {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .statistics .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .statistics .container .stats {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px)  {
+  .statistics .container .stats {
+    flex-basis: 25%;
+  }
+}
+/* END SECTION STATISTICS */
